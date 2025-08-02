@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:13
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: abc123
+      POSTGRES_DB: mitocode_students
+  admin:
+    image: dpage/pgadmin4
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 80:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: zv23001@ues.edu.sv
+      PGADMIN_DEFAULT_PASSWORD: abc123
+      PGADMIN_LISTEN_PORT: 80
