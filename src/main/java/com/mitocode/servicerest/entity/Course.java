@@ -35,7 +35,7 @@ public class Course {
     @Column(nullable = false)
     private Boolean stateCourse = true;
 
-    @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<DetailRegistration> detailRegistrationCourse;
 
     @ManyToMany(fetch = FetchType.LAZY)
