@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Repository
 public  interface StudentRepository extends JpaRepository<Student, Integer>{
+
     Optional<Student> findByDni(String dni);
 
     @Query("SELECT s FROM Student s ORDER BY s.age DESC")
