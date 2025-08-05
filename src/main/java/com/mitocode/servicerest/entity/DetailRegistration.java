@@ -1,7 +1,7 @@
 package com.mitocode.servicerest.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import javax.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
